@@ -4,7 +4,7 @@
   "description": "Made with create-react-library",
   "author": "Umair Khalid",
   "license": "MIT",
-  "repository": "Umair Khalid/chat-ui",
+  "repository": "umairkhalid598/chat-ui",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
