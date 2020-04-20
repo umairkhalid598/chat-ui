@@ -1,10 +1,22 @@
 import React from 'react'
 
-import { ExampleComponent } from 'chat-ui'
+import { Chat } from 'chat-ui'
 import 'chat-ui/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const messages = [
+    {
+      id: 1,
+      isSender: true,
+      text: 'Hi'
+    },
+    {
+      id: 2,
+      isSender: false,
+      text: 'Hi, how are you?'
+    },
+  ]
+  return <Chat messages={messages} />
 }
 
 export default App
