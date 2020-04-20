@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { ChatMessageUi } from './styles'
+import { MessageText, MessageImage } from './styles'
 
 const ChatMessage = (props) => {
   const { message } = props
 
   return (
-    <ChatMessageUi isSender={message.isSender}>{message.text}</ChatMessageUi>
+    <Fragment>
+      {message.imageUrl && <MessageImage src={message.imageUrl} />}
+      {message.text && (
+        <MessageText isSender={message.isSender}>{message.text}</MessageText>
+      )}
+    </Fragment>
   )
 }
 
