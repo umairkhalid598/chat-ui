@@ -2,14 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ChatBox } from './styles'
 import ChatMessage from '../chatMessage'
+import ChatInput from '../ChatInput'
 
 const Chat = (props) => {
-  const { messages } = props
+  const { messages, value, handleInputChange } = props
   return (
     <ChatBox>
       {messages.map((message) => (
         <ChatMessage key={message.id} message={message} />
       ))}
+      <ChatInput value={value} handleInputChange={handleInputChange} />
     </ChatBox>
   )
 }

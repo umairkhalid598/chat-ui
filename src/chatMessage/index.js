@@ -1,17 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { MessageText, MessageImage } from './styles'
+import { MessageText, MessageImage, Message } from './styles'
 
 const ChatMessage = (props) => {
   const { message } = props
 
   return (
-    <Fragment>
+    <Message isSender={message.isSender}>
       {message.imageUrl && <MessageImage src={message.imageUrl} />}
-      {message.text && (
-        <MessageText isSender={message.isSender}>{message.text}</MessageText>
-      )}
-    </Fragment>
+      {message.text && <MessageText>{message.text}</MessageText>}
+    </Message>
   )
 }
 

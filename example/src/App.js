@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Chat } from 'chat-ui'
 import 'chat-ui/dist/index.css'
 
 const App = () => {
+  const [value, setValue] = useState("")
   const messages = [
     {
       id: 1,
@@ -16,7 +17,8 @@ const App = () => {
       text: 'Hi, how are you?'
     },
   ]
-  return <Chat messages={messages} />
+  console.log(value)
+  return <Chat messages={messages} value={value} handleInputChange={(e) => setValue(e.target.value)} />
 }
 
 export default App
