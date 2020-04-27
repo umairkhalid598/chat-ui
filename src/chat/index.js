@@ -5,13 +5,17 @@ import ChatMessage from '../chatMessage'
 import ChatInput from '../ChatInput'
 
 const Chat = (props) => {
-  const { messages, value, handleInputChange } = props
+  const { messages, value, handleInputChange, handleSubmit } = props
   return (
     <ChatBox>
       {messages.map((message) => (
         <ChatMessage key={message.id} message={message} />
       ))}
-      <ChatInput value={value} handleInputChange={handleInputChange} />
+      <ChatInput
+        value={value}
+        handleInputChange={handleInputChange}
+        handleSubmit={handleSubmit}
+      />
     </ChatBox>
   )
 }
@@ -24,7 +28,10 @@ Chat.propTypes = {
       text: PropTypes.string,
       imageUrl: PropTypes.string
     })
-  )
+  ),
+  value: PropTypes.string,
+  handleInputChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 }
 
 export default Chat

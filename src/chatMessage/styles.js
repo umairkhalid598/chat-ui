@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
-export const MessageText = styled.div`
-  height: 20px;
-  display: flex;
+export const MessageText = styled.p`
+  height: auto;
   min-width: 2rem;
-  justify-content: center;
+  margin: 0;
 `
 
 export const MessageImage = styled.img`
@@ -16,6 +15,7 @@ export const Message = styled.div`
   width: fit-content;
   padding: 0.4rem;
   border-radius: 0.47rem;
+  margin-top: 1rem;
   background-color: ${(props) => (props.isSender ? '#4d7cfe' : '#F9F9F9')};
   color: ${(props) => (props.isSender ? '#ffffff' : '#717172')};
   align-self: ${(props) => (props.isSender ? 'flex-end' : 'flex-start')};

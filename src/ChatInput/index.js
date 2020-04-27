@@ -20,7 +20,12 @@ const ChatInput = (props) => {
         value={value || ''}
         onChange={handleChange}
       />
-      <InputButton onClick={handleSubmit}>
+      <InputButton
+        onClick={(e) => {
+          setRows(1)
+          handleSubmit(e)
+        }}
+      >
         <IconButton icon={faPaperPlane} />
       </InputButton>
     </ChatInputBox>

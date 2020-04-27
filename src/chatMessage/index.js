@@ -8,7 +8,10 @@ const ChatMessage = (props) => {
   return (
     <Message isSender={message.isSender}>
       {message.imageUrl && <MessageImage src={message.imageUrl} />}
-      {message.text && <MessageText>{message.text}</MessageText>}
+      {message.text &&
+        message.text
+          .split('\n')
+          .map((item, i) => <MessageText key={i}>{item}</MessageText>)}
     </Message>
   )
 }
