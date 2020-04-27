@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const MessageText = styled.p`
   height: auto;
-  min-width: 2rem;
   margin: 0;
 `
 
@@ -16,6 +15,8 @@ export const Message = styled.div`
   padding: 0.4rem;
   border-radius: 0.47rem;
   margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   background-color: ${(props) => (props.isSender ? '#4d7cfe' : '#F9F9F9')};
   color: ${(props) => (props.isSender ? '#ffffff' : '#717172')};
   align-self: ${(props) => (props.isSender ? 'flex-end' : 'flex-start')};
